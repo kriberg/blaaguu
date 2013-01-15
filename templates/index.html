@@ -1,0 +1,27 @@
+{% extends "root.html" %}
+{% block title %}ixan.no{% endblock %}
+{% block content %}
+<div id="index-container" class="container">
+    <div class="row page-header span12">
+        <h1>my private feed</h1>
+        <em>the world starts at the end of your comfort zone</em>
+    </div>
+    <div class="row">
+        <div class="span12 btn-group">
+            <a class="btn" href="https://github.com/kriberg">github</a>
+            <a class="btn" href="mailto:kriberg@tihlde.org">email</a>
+            <a class="btn" href="https://twitter.com/ungeherrberg">tweets</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6">
+            <h2>projects</h2>
+        </div>
+        <div class="span6">
+            <h2>blag</h2>
+            {% for post in posts %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
