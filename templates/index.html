@@ -1,27 +1,15 @@
-{% extends "root.html" %}
+{% extends "nav.html" %}
 {% block title %}ixan.no{% endblock %}
-{% block content %}
-<div id="index-container" class="container">
-    <div class="row page-header span12">
-        <h1>my private feed</h1>
-        <em>the world starts at the end of your comfort zone</em>
-    </div>
-    <div class="row">
-        <div class="span12 btn-group">
-            <a class="btn" href="https://github.com/kriberg"><i class="icon-github"></i> github</a>
-            <a class="btn" href="mailto:kriberg@tihlde.org"><i class="icon-envelope-alt"></i> email</a>
-            <a class="btn" href="https://twitter.com/ungeherrberg"><i class="icon-twitter"></i> tweets</a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="span6">
+{% block subcontent %}
+        <div class="span4 offset2">
             <h2>projects<i class="icon-wrench"></i></h2>
         </div>
-        <div class="span6">
+        <div class="span4">
             <h2>blag<i class="icon-comments"></i></h2>
-            {% for post in posts %}
-            {% endfor %}
+            <ul class="unstyled posts">
+                {% for post in posts %}
+                <li><a href="{{ post.2 }}">{{ post.1 }}</a><br/><em>{{ post.0.strftime('%c') }}</em></li>
+                {% endfor %}
+            </ul>
         </div>
-    </div>
-</div>
 {% endblock %}

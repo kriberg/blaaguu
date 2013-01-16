@@ -1,0 +1,21 @@
+{% extends "root.html" %}
+{% block content %}
+<div id="index-container" class="container">
+    <div class="row page-header span12">
+        <h1>within 90% accuracy</h1>
+        <em>{% include "punches.html" %}</em>
+    </div>
+    <div class="row">
+        <div class="span12 btn-group linkbar">
+            <a class="btn" href="/"><i class="icon-home"></i> home</a>
+            <a class="btn" href="https://github.com/kriberg"><i class="icon-github"></i> github</a>
+            <a class="btn" href="mailto:kriberg@tihlde.org"><i class="icon-envelope-alt"></i> email</a>
+            <a class="btn" href="https://twitter.com/ungeherrberg"><i class="icon-twitter"></i> tweets</a>
+        </div>
+    </div>
+    <div class="row">
+        {% block subcontent %}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
