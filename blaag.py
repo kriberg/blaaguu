@@ -7,7 +7,7 @@ from markdown import markdown
 app = Flask(__name__)
 
 def get_posts():
-    md_files = glob('blaagposts/*.md')
+    md_files = glob('../blaagposts/*.md')
     posts = []
     for f in md_files:
         filename = f.split('/')[-1]
@@ -31,7 +31,7 @@ def post(post):
     for entry in get_posts():
         if not post == entry[2]:
             continue
-        with open('blaagposts/%s.md' % entry[2]) as f:
+        with open('../blaagposts/%s.md' % entry[2]) as f:
             return render_template('post.html',
                     entry=entry,
                     post=markdown(f.read()))
