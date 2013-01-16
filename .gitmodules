@@ -1,3 +1,3 @@
 [submodule "blaagposts"]
 	path = blaagposts
-	url = git://github.com/kriberg/floskelblaag.git
+	url = git://github.com/kriberg/blaagposts.git
