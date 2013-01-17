@@ -1,6 +1,7 @@
 from flask import Flask, render_template, abort
 from glob import glob
 import subprocess
+import shlex
 from datetime import datetime
 from markdown import markdown
 
@@ -12,7 +13,9 @@ def get_posts():
     for f in md_files:
         filename = f.split('/')[-1]
         try:
-            timestamp = datetime.fromtimestamp(int(subprocess.check_output('git log --pretty=format:%%ct --date=local --reverse -- %s' % filename, cwd='blaagposts', shell=True)))
+            timestamp = datetime.fromtimestamp(int(subprocess.check_output(
+                shlex.split('git log --pretty=format:%%ct --date=local --reverse -- %s' % filename),
+                cwd='blaagposts')))
         except:
             timestamp = datetime.now()
         posts.append((timestamp, unslug(filename), filename.replace('.md', '')))
