@@ -7,8 +7,8 @@
         <div class="span4">
             <h2>blag<i class="icon-comments"></i></h2>
             <ul class="unstyled posts">
-                {% for post in posts %}
-                <li><a href="{{ post.2 }}">{{ post.1 }}</a><br/><em>{{ post.0.strftime('%c') }}</em></li>
+                {% for slug, post in ph.items() %}
+                <li><a href="{{ slug }}">{{ post.0 }}</a><br/><em></em></li>
                 {% endfor %}
             </ul>
         </div>

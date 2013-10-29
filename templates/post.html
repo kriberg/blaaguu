@@ -1,7 +1,7 @@
 {% extends "nav.html" %}
-{% block title %}{{ entry.1 }}{% endblock %}
+{% block title %}{{ post.0 }}{% endblock %}
 {% block subcontent %}
         <div class="span8 offset2 post">
-             {{ post|safe }}
+             {{ post.1|safe }}
         </div>
 {% endblock %}
