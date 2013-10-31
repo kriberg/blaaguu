@@ -1,0 +1,22 @@
+[{
+    "title": "salt",
+    "about": "random aix hacks for salt",
+    "sauce": "http://github.com/kriberg/salt"
+}, {
+    "title": "eve-armada",
+    "about": "a corporation management site for eve online",
+    "site": "http://eve-armada.com",
+    "sauce": "http://github.com/kriberg/eve-armada"
+}, {
+    "title": "welp",
+    "about": "a SRP tracker for eve online",
+    "site": "http://welp.eve-evol.com",
+    "sauce": "http://github.com/kriberg/welp"
+}, {
+    "title": "blaaguu",
+    "about": "this blaag application",
+    "site": "http://ixan.no/",
+    "sauce": "http://github.com/kriberg/blaaguu"
+}]
+
+

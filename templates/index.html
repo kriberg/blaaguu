@@ -1,15 +1,45 @@
 {% extends "nav.html" %}
 {% block title %}ixan.no{% endblock %}
 {% block subcontent %}
-        <div class="span4 offset2">
-            <h2>projects<i class="icon-wrench"></i></h2>
-        </div>
         <div class="span4">
-            <h2>blag<i class="icon-comments"></i></h2>
-            <ul class="unstyled posts">
-                {% for slug, post in ph.items() %}
-                <li><a href="{{ slug }}">{{ post.0 }}</a><br/><em></em></li>
+            <h2>projects<i class="fa fa-code fa-1x"></i></h2>
+            <ul class="unstyled">
+                {% for project in projects %}
+                <li>
+                    <div class="topic">
+                        <h4>{{ project.title }}</h4>
+                        <ul class="unstyled">
+                            <li>{{ project.about }}</li>
+                            {% if project.site %}
+                            <li><i class="fa fa-globe"></i> <a href="{{ project.site }}">{{ project.site }}</a></li>
+                            {% endif %}
+                            {% if project.sauce %}
+                            <li><i class="fa fa-code-fork"></i> <a href="{{ project.sauce }}">{{ project.sauce }}</a></li>
+                            {% endif %}
+                        </dl>
+                    </div>
+                </li>
                 {% endfor %}
             </ul>
+        </div>
+        <div class="span5">
+            <h2>blaag<i class="fa fa-comments fa-1x"></i></h2>
+            <ul class="unstyled posts">
+                {% for entry in ph.posts %}
+                {% set post = entry.1 %}
+                <li><a href="{{ post.slug }}">{{ post.title }}</a> <small>({{ post.posted }})</small></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="span3">
+            <h2>gaming<i class="fa fa-gamepad fa-1x"></i></h2>
+            <p>
+                <a href="http://eveonline.com"><img src="static/evelogo.png"></a>
+                <ul>
+                    <li><a href="https://gate.eveonline.com/Profile/Vittoros">Vittoros</a></li>
+                    <li><a href="https://gate.eveonline.com/Profile/Alyzza">Alyzza</a></li>
+                    <li><a href="https://gate.eveonline.com/Profile/Yog Sattoth">Yog Sattoth</a></li>
+                </ul>
+            </p>
         </div>
 {% endblock %}

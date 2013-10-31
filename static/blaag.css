@@ -8,3 +8,16 @@ div.linkbar {
     padding-bottom: 16px;
     text-align: center;
 }
+
+div.topic {
+    border: 2px solid #ddd;
+    background: #efefef;
+    padding: 5px;
+    margin-bottom: 1em;
+    border-radius: 6px;
+    vertical-align: text-top;
+}
+
+div.topic i.fa {
+    width: 16px;
+}
